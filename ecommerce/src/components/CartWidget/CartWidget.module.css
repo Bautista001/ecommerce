@@ -1,0 +1,9 @@
+.cartWidget {
+    display: flex;
+    align-items: center;
+    fill: white;
+    color: white;
+}
+.cartWidget img {
+    filter: invert(1);
+}

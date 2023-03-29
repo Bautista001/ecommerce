@@ -1,10 +1,11 @@
 import CartWidget from '../CartWidget/CartWidget';
+import styles from "./NavBar.module.css";
 
 const NavBar = () => {
     return(
-        <nav className="row justify-content-between align-items-center p-3">
-            <h3>Ecommerce Mori</h3>
-            <div>
+        <nav className={styles.nav}>
+            <h3>ECCOMERCE</h3>
+            <div className={styles.navMenu}>
                 <button>Celulares</button>
                 <button>Computadoras</button>
                 <button>Impresoras</button>
