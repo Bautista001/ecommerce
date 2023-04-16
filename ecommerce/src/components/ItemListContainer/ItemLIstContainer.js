@@ -3,7 +3,7 @@ import { getProducts } from '../../asyncMock';
 import ItemList from '../ItemList/ItemList';
 
 const ItemListContainer = ({greeting}) => {
-    const [product, setProducts] = useState([]);
+    const [products, setProducts] = useState([]);
 
     useEffect(() => {
         getProducts()
@@ -14,6 +14,7 @@ const ItemListContainer = ({greeting}) => {
                 console.error(error);
             })
     }, []);
+    
 
     return(
         <div>
