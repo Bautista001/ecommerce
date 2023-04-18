@@ -1,0 +1,7 @@
+.listGroup {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    justify-content: center;
+    gap: 2em;
+}
