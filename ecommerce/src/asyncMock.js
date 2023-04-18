@@ -64,7 +64,7 @@ const products = [
       },
       {
         id: '008',
-        name: 'Asus ROG Zephyrus G14',
+        name: 'Asus ROG Zephyrus G1',
         price: 1499,
         category: 'Computadoras',
         img: '../images/Asus-Zephyrus-G14.jpg',
