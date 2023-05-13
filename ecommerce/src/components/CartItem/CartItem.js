@@ -1,29 +1,33 @@
 import { useContext } from "react";
 import { CartContext } from "../../Context/cartContext";
+import styles from './CartItem.module.css';
 
 const CartItem = ({ item }) => {
-    const { removeItem } = useContext(CartContext)
+  const { removeItem } = useContext(CartContext)
 
 
-if (item.stock === 0) {
+  if (item.cantidad === 0) {
     removeItem(item)
-}
+  }
 
-return (
-    <div className="bg-[#faeee7] grid grid-cols-5 gap-8 px-10 py-2 border-t-2 border-b-2 border-white align-middle">
-      <div>
-        <h2 className="pt-2">{item.nombre}</h2>
+  return (
+    <div className="container pt-5">
+      <div className={styles.cartItem}>
+        <picture>
+          <img src={item.imageId} alt={item.title} className={styles.itemImg} />
+        </picture>
+        <div>
+          <h3 className="">{item.title}</h3>
+        </div>
+        <div>
+          <span className=""><strong>Cantidad:</strong> {item.cantidad}</span>
+        </div>
+
+        <span className=""><strong>Precio:</strong> ${item.price}</span>
+        <span className=""><strong>Subtotal:</strong> ${item.cantidad * item.price}</span>
+        <button onClick={() => removeItem(item.id)} className="">X</button>
+
       </div>
-
-      <div>
-        <p className="pt-2">{item.stock}</p>
-      </div>
-
-      <span className="pt-2">${item.precio}</span>
-      <p className="pt-2">${item.stock * item.precio}</p>
-      <button onClick={() => removeItem(item.id)} className="bg-[#ff8ba7] text-white text-center max-w-fit transition duration-300 ease-in-out hover:bg-[#faeee7] hover:text-[#33272a] rounded-full font-semibold px-4 py-2">X</button>
-
-      
     </div>
   );
 };

@@ -1,5 +1,10 @@
 .itemImg {
     width: 500px;
+    border-radius: 20px;
+}
+.breadcrumb {
+    color: #bbb;
+    text-align: left;
 }
 .info {
     text-align: left;
@@ -10,5 +15,8 @@
     padding-left: 20px;
 }
 .itemFooter {
-
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2em;
 }

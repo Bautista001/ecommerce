@@ -30,14 +30,14 @@ export const CartProvider = ({ children }) => {
     }
 
     const total = cart.reduce(
-        (prev, current) => prev + current.stock * current.price,
+        (prev, current) => prev + current.cantidad * current.price,
         0
       );
 
     const totalQuantity = () => {
-        let stock = 0;
-        cart.forEach((item) => stock += item.stock)
-        return stock;
+        let cantidad = 0;
+        cart.forEach((item) => cantidad += item.cantidad)
+        return cantidad;
     };
 
     return (

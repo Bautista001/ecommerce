@@ -1,0 +1,14 @@
+.emptyCart,
+.goToCheckout {
+    padding: 10px 20px;
+    background: #546371;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin: 0
+}
+
+.goToCheckout {
+    background: #fff;
+    color: #546371;
+}

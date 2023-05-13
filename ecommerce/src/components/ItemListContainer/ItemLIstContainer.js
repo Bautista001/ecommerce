@@ -32,6 +32,7 @@ const ItemListContainer = ({greeting}) => {
                 setLoading(false)
             })
         }, [categoryId])
+        
     return(
         <div className='container p-3'>
             <h1>{greeting}</h1>
