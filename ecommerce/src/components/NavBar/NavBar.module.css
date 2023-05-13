@@ -9,6 +9,9 @@
     margin-left: auto;
     margin-right: 5em;
 }
+.navTitle {
+    color: #fff;
+}
 .navItem{
     background: none;
     position: relative;

@@ -6,7 +6,7 @@ const NavBar = () => {
     return(
         <nav className={styles.nav}>
             <Link to='/'>
-                <h2>ECCOMERCE</h2>
+                <h2 className={styles.navTitle}>ECCOMERCE</h2>
             </Link>
             <div className={styles.navMenu}>
                 <NavLink to={`/category/Celulares`} className={( {isActive}) => isActive ? (styles.navItemActive, styles.navItem) : styles.navItem }>Celulares</NavLink>

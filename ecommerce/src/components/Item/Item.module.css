@@ -1,3 +1,23 @@
+.cardItem {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 30px;
+    text-align: center;
+    color: #000;
+}
 .cardItem img {
     width: 300px;
+}
+
+.itemBuy {
+    background: #343e48;
+    border-radius: 20px;
+    color: #fff;
+    padding: 5px 0;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+.itemBuy:hover {
+    opacity: .8;
+    transition: all .3s ease;
 }

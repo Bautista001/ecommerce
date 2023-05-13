@@ -1,28 +1,28 @@
 import { Link } from 'react-router-dom';
 import styles from './Item.module.css';
 
-const Item = ({id, name, img, price, stock}) => {
+const Item = ({id, title, imageId, price, stock}) => {
 
     return (
         <article className={styles.cardItem}>
-            <header className="header">
-                <h2 className="itemHeader">
-                    {name}
-                </h2>
-            </header>
-            <picture>
-                <img src={img} alt={name} className="itemImg" />
-            </picture>
-            <section>
+            <Link to={`/item/${id}`}>
+                <picture>
+                    <img src={imageId} alt={title} className="itemImg" />
+                </picture>
+            </Link>
+            <section className="m-2">
+                <h4 className="itemHeader">
+                    {title}
+                </h4>
                 <p className="info">
                     Precio: ${price}
                 </p>
                 <p className="info">
-                    Stock disponible: {stock}
+                    Stock: {stock}
                 </p>
             </section>
-            <footer className="itemFooter">
-                <Link to={`/item/${id}`} className="option"> Ver detalle </Link>
+            <footer className={styles.itemBuy}>
+                <Link to={`/item/${id}`} className="option"> Comprar </Link>
             </footer>
         </article>
     )
